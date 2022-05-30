@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bluer-color: #5352d4;
+  --blue-color: #5655da;
+  --pink-color: #f74470;
+  --text-body: #1a1a1a;
+  --text-main: #2c2c2c;
+  --font-primary: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+textarea {
+  outline: 0;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+body {
+  color: var(--text-body);
+  font-family: var(--font-primary);
+  background-color: var(--bluer-color);
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.wrapper {
+  --w-header: 260px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  color: var(--pink-color);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+.header {
+  color: #fff;
+  width: var(--w-header);
+  background-color: var(--blue-color);
+  position: fixed;
+  height: 100%;
+  z-index: 5;
+  padding: 46px;
+}
+
+.header ul li a {
+  color: #fff;
+}
+
+.header .avatar {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+}
+
+.header .avatar img {
+  width: 100%;
+  border-radius: inherit;
+}
+
+.header .name {
+  margin: 34px 0;
+}
+
+.header .name h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 5px;
+}
+
+.header .name span {
+  color: #d8d8e9;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.header .social {
+  margin: 0 0 34px;
+}
+
+.header .social-list li {
+  padding-right: 20px;
+}
+
+.header .social-list li a i {
+  font-size: 18px;
+}
+
+.header .nav .nav-menu li {
+  padding-bottom: 17px;
+}
+
+.header .nav .nav-menu li a {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: block;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  width: calc(1000px - var(--w-header));
+  background-color: #fff;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content p {
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.main-content section {
+  position: relative;
+  padding: 60px 70px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-header {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.about .resume-download {
+  background-color: var(--blue-color);
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about .resume-download i {
+  margin-right: 2px;
+}
+
+.about .resume-download .tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-family: sans-serif;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.about .resume-download .tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.about .resume-download:hover {
+  text-decoration: underline;
+}
+
+.about .resume-download:hover .tooltip {
+  visibility: visible;
+}
+
+.about .intro .intro-text {
+  margin: 0;
+}
+
+.about .intro .info {
+  margin-top: 40px;
+  padding: 0;
+}
+
+.about .intro .info li {
+  padding: 7px 0;
+  color: #0c0c0c;
+  font-size: 14px;
+}
+
+.about .intro .info li:first-child {
+  padding-top: 0;
+}
+
+/* SKILL */
+.skill-heading {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/* EDUCATION */
+
+.edu .edu-item {
+  margin-top: 30px;
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 140px;
+}
+
+.edu .edu-item h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.edu .edu-item span {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* WORKS */
+.works .works-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: -2px;
+  margin-left: -2px;
+}
+
+.works .works-list .works-item {
+  height: 193px;
+  position: relative;
+  overflow: hidden;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.works .works-list .works-item .works-image {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.works .works-list .works-item .works-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.works .works-list .works-item .works-image .works-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.works .works-list .works-item .works-image .works-title h3 {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.works .works-list .works-item .works-image .works-title span {
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 100;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.works .works-list .works-item .works-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--pink-color);
+  opacity: 0;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.works .works-list .works-item:hover .works-image .works-title {
+  opacity: 1;
+}
+
+.works .works-list .works-item:hover .works-image img {
+  transform: scale(1.1);
+}
+
+.works .works-list .works-item:hover .works-image .works-title h3 {
+  animation: animate1 0.3s ease-in-out;
+}
+
+.works .works-list .works-item:hover .works-image .works-title span {
+  animation: animate2 0.3s ease-in-out;
+}
+
+.works .works-list .works-item:hover .works-overlay {
+  opacity: 0.8;
+}
+
+@keyframes animate1 {
+  from {
+    transform: translateY(-500%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate2 {
+  from {
+    transform: translateY(500%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* AWARDS */
+
+.award-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.award-item i {
+  color: #ffc107 !important;
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+.award-name a {
+  color: #4294cb;
+}
+
+
