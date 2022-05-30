@@ -219,7 +219,7 @@ body {
   border-bottom: 5px solid black;
 }
 
-.about .resume-download:hover {
+.about .resume-download:hover .download-text {
   text-decoration: underline;
 }
 
